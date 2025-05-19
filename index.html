@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payoo Bank</title>
+
+    <!-- daisyUI cdn link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- google font link  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .outfit-font {
+        font-family: "Outfit", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+      }
+    </style>
+  </head>
+  <body class="bg-slate-800 outfit-font">
+    <section class="bg-slate-200 max-w-md min-h-screen mx-auto">
+      <div class="flex items-center justify-center">
+        <div class="relative mt-10">
+          <img class="max-w-50" src="./assets/bg.png" alt="" />
+        </div>
+        <div class="absolute">
+          <img class="max-w-40" src="./assets/Group.png" alt="" />
+        </div>
+      </div>
+      <div class="">
+        <div class="hero-content flex-col lg:flex-row-reverse">
+          <div class="card bg-base-100 w-full max-w-sm shadow-2xl">
+            <div class="card-body">
+              <form class="fieldset">
+                <label class="font-medium text-black">Mobile Number</label>
+                <input
+                  value="01571300962"
+                  id="account-number"
+                  type="number"
+                  class="input"
+                  placeholder="Enter your number"
+                  required
+                />
+                <label class="text-black font-medium">4 Digit Pin</label>
+                <input
+                  value="1234"
+                  id="pin-number"
+                  type="password"
+                  class="input"
+                  placeholder="Enter 4 Digit Pin"
+                  required
+                />
+                <div><a class="link link-hover">Forgot password?</a></div>
+                <button
+                  id="login-btn"
+                  class="btn bg-blue-600 mt-4 rounded-xl text-white"
+                >
+                  Login
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="./utilities/utilities.js"></script>
+    <script src="./script/login.js"></script>
+  </body>
+</html>
