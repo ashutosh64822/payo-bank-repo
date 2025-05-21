@@ -39,9 +39,9 @@
     </style>
   </head>
   <body class="bg-slate-800 outfit-font">
-    <section class="bg-slate-200 max-w-md min-h-screen mx-auto px-2">
+    <section class="bg-slate-200 max-w-md min-h-screen mx-auto ">
       <header class="shadow py-2 mb-8 bg-white">
-        <nav class="flex items-center justify-between">
+        <nav class="flex items-center justify-between px-2">
           <div class="flex items-center justify-center">
             <img class="max-w-10 ml-1" src="/assets/Group.png" alt="" />
             <div class="ml-2">
@@ -52,7 +52,7 @@
             </div>
           </div>
 
-          <button class="btn rounded-sm text-stone-500">
+          <button class="btn rounded-sm text-stone-500 font-bold hover:bg-gray-400 hover:text-white">
             <svg
               class="w-4 rotate-180 text-stone-500"
               xmlns="http://www.w3.org/2000/svg"
@@ -67,7 +67,7 @@
         </nav>
       </header>
 
-      <main>
+      <main class="px-2">
         <!--welcome section -->
         <section class="mb-6 bg-white py-4 px-5 rounded-xl">
           <h1 class="font-bold text-2xl">🔥 Welcome to Payooo!</h1>
@@ -85,7 +85,7 @@
 
           <div
             id="add-money-box"
-            class="flex flex-col items-center border p-6 rounded-xl cursor-pointer"
+            class="flex flex-col items-center border p-6 rounded-xl cursor-pointer hover:bg-gray-400 hover:text-white"
           >
             <img src="./assets/wallet1.png" />
             <h3>Add Money</h3>
@@ -95,7 +95,7 @@
 
           <div
             id="cash-out-box"
-            class="flex flex-col items-center border p-6 rounded-xl cursor-pointer"
+            class="flex flex-col items-center border p-6 rounded-xl cursor-pointer hover:bg-gray-400 hover:text-white"
           >
             <img src="./assets/send1.png" />
             <h3>Cash Out</h3>
@@ -105,7 +105,7 @@
 
           <div
             id="transfer-money-box"
-            class="flex flex-col items-center justify-center border p-2 rounded-xl cursor-pointer"
+            class="flex flex-col items-center justify-center border p-2 rounded-xl cursor-pointer hover:bg-gray-400 hover:text-white"
           >
             <img src="./assets/money1.png" />
             <h3>Transfer Money</h3>
@@ -115,7 +115,7 @@
 
           <div
             id="get-bonus-box"
-            class="flex flex-col items-center border p-6 rounded-xl cursor-pointer"
+            class="flex flex-col items-center border p-6 rounded-xl cursor-pointer hover:bg-gray-400 hover:text-white"
           >
             <img src="./assets/bonus1.png" />
             <h3>Get Bonus</h3>
@@ -125,7 +125,7 @@
 
           <div
             id="pay-bill-box"
-            class="flex flex-col items-center border p-6 rounded-xl cursor-pointer"
+            class="flex flex-col items-center border p-6 rounded-xl cursor-pointer hover:bg-gray-400 hover:text-white"
           >
             <img src="./assets/purse1.png" />
             <h3>Pay Bill</h3>
@@ -135,7 +135,7 @@
 
           <div
             id="transaction-box"
-            class="flex flex-col items-center border p-6 rounded-xl cursor-pointer"
+            class="flex flex-col items-center border p-6 rounded-xl cursor-pointer hover:bg-gray-400 hover:text-white"
           >
             <img src="./assets/transaction1.png" />
             <h3>Transactions</h3>
@@ -155,7 +155,7 @@
                 <div class="card-body">
                   <form class="fieldset">
                     <legend class="text-base">Select a Bank</legend>
-                    <select class="select">
+                    <select id="select-bank" class="select">
                       <option disabled selected>Select Bank</option>
                       <option>Bikash</option>
                       <option>Nagad</option>
@@ -326,7 +326,7 @@
                     >
                     <input
                       value="ashutosh"
-                      id="bonus-cupon"
+                      id="bonus-coupon"
                       type="text"
                       class="input"
                       placeholder="Enter your coupon"
@@ -413,9 +413,10 @@
           <!--Transaction History content -->
 
           <div>
-            <div class="hero-content flex-col lg:flex-row-reverse">
-              <div class="card bg-base-100 w-full max-w-sm shadow-2xl"></div>
-            </div>
+            <div
+              id="transaction-container"
+              class="hero-content flex-col lg:flex-row-reverse"
+            ></div>
           </div>
         </section>
       </main>
